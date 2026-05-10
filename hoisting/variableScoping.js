@@ -9,7 +9,7 @@
 // }
 // processOrder();
 
-/* Recatored */
+/* Refactored */
 function modernProcessOrder(){
     const processOrder = "Order Number: ";
 
