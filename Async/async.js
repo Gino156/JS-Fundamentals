@@ -1,6 +1,9 @@
+
+
 // The Goal: 
 // Write a function that fetches a list of users from a mock API, 
 // filters them, and handles errors.
+
 
 // 1. Create an async function called getHighPriorityUsers.
 
@@ -17,18 +20,17 @@ async function getHighPriorityUsers() {
         const response = await fetch('https://jsonplaceholder.typicode.com/users');
         
         if(!response.ok){
-            throw new Error("Error");
+            throw new Error(`HTTP Error status: ${response.status}`);
         }
 
-        const users = await response.json();
-
-        const filtered = users.filter(user => user.id < 5);
+        const user = await response.json();
+        const filtered = user.filter(user => user.id < 5);
         console.log("Filtered users: ", filtered);
+
         return filtered;
-    }
-    catch (error){
-        console.error("Error message: ", error.message);
+    } catch (error) {
+        console.error("Error Message: ", error.message);
     }
 }
-
 getHighPriorityUsers();
+
