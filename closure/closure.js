@@ -2,9 +2,10 @@ function greetUser(){
     let name = "Gino";
 
     function displayName(){
-        console.log("Hello " + ne am+ " !");
+        console.log("Hello " + name + "!!" );
     }
     return displayName;
 }
-const myGreeting = greetUser();
-myGreeting();
+
+const myGreet = greetUser();
+myGreet()
