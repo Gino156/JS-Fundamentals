@@ -32,3 +32,5 @@ const filteredData = await getHighPrioUserTS();
 
 console.log(filteredData);
 console.log(`Total filtered users: ${filteredData.length}`);
+
+export{}
